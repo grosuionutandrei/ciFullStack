@@ -33,7 +33,7 @@ jobs:
         with:
           dotnet-version: "8.0.x"
           cache: true
-          global-json-file: csharp/global.json
+          cache-dependency-path: "**/package.lock.json"
       - run: dotnet restore --locked-mode
       - name: Build
         run: dotnet build
